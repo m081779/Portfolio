@@ -4,7 +4,7 @@ $(document).ready(function () {
 		if (this.hash!=="") {
 			event.preventDefault();
 			var hash = this.hash;
-			console.log(window.location.hash);
+			
 			$('html').animate({
 				scrollTop: $(hash).offset().top
 
@@ -12,5 +12,8 @@ $(document).ready(function () {
 				window.location.hash = hash;
 			});
 		}
+
 	});
+
 });
+
