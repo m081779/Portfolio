@@ -5,13 +5,13 @@ html, body {
 	padding: 0;
 	box-sizing: border-box;
 	position: relative;
-	background-color: lightcyan;
+	/*background-color: lightcyan;*/
 	/*font-family: Helvetica;*/
 	font-family: monospace;
 }
 
 a:hover {
-color: #777777;
+color: #ddd;
 text-decoration: none;
 }
 
@@ -25,14 +25,17 @@ canvas {
 	top:0;
 	left:0;
 	z-index: -1;
+	background: #131862; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left top, 	#131862, #000); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom right, 	#131862, #000); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom right, 	#131862, #000); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom right, 	#131862, #000); /* Standard syntax */
 }
 
 .main-heading {
 	font-size: 40px;
-	text-align: right;
 	border: 1px solid black;
 	display:inline-block;
-	/*width: 300px;	*/
 	margin-bottom: 30px;
 	padding: 10px;
 	background-color: lightcyan;
@@ -40,40 +43,38 @@ canvas {
 }
 
 
-aside ul {
+aside  {
 	display: inline;
 	transform: rotate(90deg);
 	position:fixed;
 	top: 0;	
 	right: 0;
-	margin:230px -150px 0 0;
-	/*width: 600px;	*/
+	margin:330px -150px 0 0;
+	text-shadow: 0px 2px 30px #fff;
 }
 
 aside ul li {
 	transform: rotate(-90deg);
-/*	margin-right: 20px;*/
 	margin: 20px;
 	display: inline-block;
-	opacity: 0.5;
 	transition: transform 300ms ease-in-out, opacity 300ms ease-in-out, text-shadow 300ms ease-in-out;
 }
 
 aside a {
-	color: #777777;
+	color: #ddd;
 }
+
 
 aside .social-icon:hover {
 	opacity:0.8;
-	transform:scale(1.6) rotate(-90deg) translateX(-7px);
-	color: #777777;
-	text-shadow: 2px 2px 10px #ddd;
+	transform:scale(1.8) rotate(-90deg);
+	color: #ddd;
+	text-shadow: 0px 2px 30px #fff;
 }
 
 .main-img {
 	float: left;
 	margin:0 50px 37px 0;
-	
 }
 
 .img-container:hover img {
@@ -98,7 +99,7 @@ aside .social-icon:hover {
 
 .target:hover a {
 	transform: rotate(90deg) translateY(-40px);	
-	text-shadow: 2px 2px 20px #ddd;
+	text-shadow: 2px 2px 30px #fff;
 }
 
 nav ul li {
@@ -107,11 +108,8 @@ nav ul li {
 	line-height: 65px
 	font-weight: 600;
 	font-smoothing: antialiased;
-	color: #777777;
+	color: #ddd;
 	margin-left: 15px;
-	/*transform: rotate(90deg);	*/
-	/*transform-origin: top left:;*/
-	/*background-color: #fff;*/
 	transition: transform 300ms ease-in-out;
 	transform: rotate(0deg);
 	font-family: monospace;
@@ -122,14 +120,14 @@ nav ul li {
 nav ul {
 	list-style: none;
 	float: right;
-	/*margin-right: 30px;*/
 	margin: 40px 60px;
+	text-shadow: 0px 2px 30px #fff;
 }
 
 nav a {
 	display: inline-block;
 	text-decoration: none;
-	color: #777777;
+	color: #ddd;
 	transition: all 300ms ease-in-out;
 	transform-origin: left;
 	pointer-events: visiblePainted;
@@ -149,11 +147,12 @@ nav {
 
 .main-content {
 	/*height: 100vh;*/
+	position: relative;
 	background-color: #EAEAEA;
-	margin:auto;
+	margin:100px auto 100px auto;
 	padding: 50px;
 	font-size: 20px;
-	opacity: 0.95;
+	opacity: 0.9;
 	box-shadow: 0px 1px 80px 2px rgba(0,0,0,0.5);
 	width: 75%;
 /*	perspective: 1000px;
@@ -180,8 +179,6 @@ nav {
 	overflow: hidden;
 	justify-content: space-between;
 	margin-bottom: 50px;
-
-
 }
 
 .img-container img {
@@ -190,13 +187,16 @@ nav {
 
 .img-heading {
 	position: absolute;
-	color: #ddd;
-	background-color: #777;
-	/*background-color: lightcyan;*/
+	/*color: #ddd;*/
+	/*background-color: #777;*/
+	color: #777;
+	background-color: lightcyan;
+	border-top: 2px solid #777;
+	border-bottom: 2px solid #777;
 	width: 100%;	
 	bottom: 20px;
 	padding: 10px ;
-	opacity: 1;
+	opacity: 0.9;
 	z-index: 100;
 	transform-origin: bottom left;
 	transition: transform 300ms ease-in-out;
@@ -224,7 +224,6 @@ nav {
 
 #contact {
 	position: relative;
-	/*margin-bottom: 	100px;*/
 }
 
 .input-field {
@@ -254,9 +253,7 @@ nav {
 
 
 #submit {
-	/*height: 30px;*/
 	background-color: gray;
-	/*width: 90px;*/
 	border: 1px solid #EAEAEA;
 	color: #EAEAEA;
 	margin-top: 15px;
@@ -266,7 +263,7 @@ nav {
 }
 
 #submit:hover {
-	background-color: #EAEAEA;
+	background-color: lightcyan;
 	color: gray;
 	border: 1px solid gray;
 }
