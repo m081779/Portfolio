@@ -99,6 +99,7 @@ function animate() {
 
 	for (var i = 0; i< circleArray.length; i++) {
 		circleArray[i].update();
+		console.log('loop firing');
 	}
 
 }
