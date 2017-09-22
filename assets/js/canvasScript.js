@@ -6,7 +6,7 @@ var mouseDistance = 200;
 var starDistance = 70;
 var particleIterator = 1
 var particleCount = 130;
-var velocityDivisor = 7;
+var velocityDivisor = 3;
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
 
@@ -80,7 +80,7 @@ function Particle(x,y,dx,dy) {
 
 	this.draw = function () {
 		c.beginPath();
-		c.arc(this.x, this.y, 0.5, 0, 2 * Math.PI);
+		c.arc(this.x, this.y, 3, 0, 2 * Math.PI);
 		c.stroke();
 	}
 } //end of Particle constructor
