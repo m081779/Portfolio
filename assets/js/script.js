@@ -30,12 +30,10 @@ document.onkeyup = function (event) {
 		var snd  = new Audio();
 		var src  = document.createElement("source");
 		src.type = "audio/mpeg";
-		src.src  = "assets/audio/contra.mp3";
+		src.src  = "assets/audio/Contra.mp3";
 		snd.appendChild(src);
 		snd.play();
 		alert('congratulations! 30 extra lives!');
 	}
-	console.log('letters: ',letterArr);
-	console.log('konami code: ',konami);
 }
 
