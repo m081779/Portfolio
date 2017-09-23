@@ -16,6 +16,7 @@ $(document).ready(function () {
 	});
 
 });
+
 var letterArr = [];
 
 document.onkeyup = function (event) {
