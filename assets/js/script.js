@@ -16,4 +16,25 @@ $(document).ready(function () {
 	});
 
 });
+var letterArr = [];
+
+document.onkeyup = function (event) {
+	var konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+	letterArr.push(event.keyCode);
+	if (letterArr.length>11) {
+		letterArr.shift();
+	}
+	if (konami.join('')===letterArr.join('')) {
+		document.getElementById('main').setAttribute('src', 'assets/images/contra.jpg')
+		var snd  = new Audio();
+		var src  = document.createElement("source");
+		src.type = "audio/mpeg";
+		src.src  = "assets/audio/contra.mp3";
+		snd.appendChild(src);
+		snd.play();
+		alert('congratulations! 30 extra lives!');
+	}
+	console.log('letters: ',letterArr);
+	console.log('konami code: ',konami);
+}
 
