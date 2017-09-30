@@ -8,6 +8,7 @@ html, body {
 	/*font-family: Helvetica;*/
 	/*font-family: monospace;*/
 	font-family: 'Press Start 2P', cursive;
+	overflow: hidden;
 }
 
 a:hover {
@@ -111,9 +112,9 @@ aside .social-icon:hover {
 nav ul li {
 	text-align: center;
 	display: inline-block;
-	line-height: 65px
+	line-height: 65px;
 	font-weight: 600;
-	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
 	color: #fff;
 	margin-left: 15px;
 	transition: transform 300ms ease-in-out;
@@ -148,14 +149,16 @@ nav {
 }
 
 .main-content {
+
+	height: 90%;
 	position: relative;
 	background-color: #EAEAEA;
 	margin:100px auto 100px auto;
 	padding: 50px;
 	font-size: 15px;
-	opacity: 0.9;
+	/*opacity: 0.9;*/
 	box-shadow: 0px 1px 80px 2px rgba(0,0,0,0.5);
-	width: 75%;
+	width: 100%;
 	line-height: 1.5em;
 	transition: transform 500ms ease-in-out;
 }
@@ -289,4 +292,48 @@ footer {
 	text-align: center;
 	line-height: 80px;
 	border-top: 5px solid #D9313F;
+}
+
+/*******************Cube code**********************/
+
+.wrapper {
+	perspective: 100000px;
+	position: relative;
+	margin:auto;
+	width: 1200px;
+	height: 100%;
+	padding-top: 2.5%;
+}
+
+#cube {
+	/*top: 5%;*/
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transform-style: preserve-3d;
+	position: absolute;
+	transition: all 2s ease;
+}
+
+#about {
+	position: absolute;
+	margin: 0;
+	display: block;
+	transform: translateZ(600px);
+	
+}
+
+#portfolio {
+	position: absolute;
+	margin: 0;
+	display: block;
+	transform: rotateY(90deg) translateZ(600px); 
+	
+}
+
+#contact {
+	margin: 0;
+	display: block;
+	position: absolute;
+	transform: rotateY(-90deg) translateZ(600px); 
 }
