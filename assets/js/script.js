@@ -33,7 +33,28 @@ document.onkeyup = function (event) {
 		src.src  = "assets/audio/Contra.mp3";
 		snd.appendChild(src);
 		snd.play();
-		alert('congratulations! 30 extra lives!');
+		alert('Congratulations! 30 extra lives!');
 	}
 }
+
+$('body').on('click','.cubeRotate', function () {
+
+	var value = $(this).text();
+	if (value==='PORTFOLIO'){
+		$('#cube').css({
+			'transform': 'rotateY(-90deg)'
+		});
+	}
+	else if (value==='CONTACT') {
+		$('#cube').css({
+			'transform': 'rotateY(90deg)'
+		});
+	}
+
+	else if (value==='ABOUT') {
+		$('#cube').css({
+			'transform': 'rotateY(0deg)'
+		});
+	}
+});
 
