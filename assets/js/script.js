@@ -42,18 +42,21 @@ $('body').on('click','.cubeRotate', function () {
 	var value = $(this).text();
 	if (value==='PORTFOLIO'){
 		$('#cube').css({
-			'transform': 'rotateY(-90deg)'
+			'transform': 'rotateY(-90deg) scale(0.9)',
+			// 'padding-top': '2.5%'
 		});
 	}
 	else if (value==='CONTACT') {
 		$('#cube').css({
-			'transform': 'rotateY(90deg)'
+			'transform': 'rotateY(90deg) scale(0.9)',
+			// 'padding-top': '2.5%'
 		});
 	}
 
 	else if (value==='ABOUT') {
 		$('#cube').css({
-			'transform': 'rotateY(0deg)'
+			'transform': 'rotateY(0deg) scale(0.9)',
+			// 'padding-top': '2.5%'
 		});
 	}
 });
